@@ -1,0 +1,612 @@
+/* ====================================
+   1. Reset & Global Styles
+   ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #4D4D4D;
+    background-color: #FFFFFF;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Common Button Styles */
+.btn {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 14px 32px;
+    background-color: #4CAF4F;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #388E3C;
+}
+
+.ghost {
+    color: #4CAF4F;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+.ghost:hover {
+    background-color: #F5F7FA;
+}
+
+.btn-shown {
+    padding: 10px 20px;
+}
+
+/* Headings */
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #4D4D4D;
+    margin-bottom: 8px;
+}
+
+.heading p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #717171;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ====================================
+   2. Header & Navigation
+   ==================================== */
+header.header {
+    background-color: #F5F7FA;
+}
+
+nav.navbar {
+    padding: 22px 0;
+}
+
+nav .logo, nav .btns {
+    width: 20%;
+}
+
+nav .logo img {
+    height: 24px;
+}
+
+nav .btns {
+    text-align: right;
+}
+
+nav .menu {
+    width: 60%;
+    text-align: center;
+}
+
+nav .menu li {
+    display: inline-block;
+}
+
+nav .menu a {
+    display: inline-block;
+    margin: 0 18px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #18191F;
+    transition: color 0.2s ease;
+}
+
+nav .menu a:hover,
+nav .menu .active {
+    font-weight: 500;
+    color: #4CAF4F;
+}
+
+/* ====================================
+   3. Hero Section
+   ==================================== */
+#hero {
+    background-color: #F5F7FA;
+    padding: 96px 0 32px 0;
+    position: relative;
+}
+
+.hero-row {
+    justify-content: space-between;
+}
+
+.hero-content {
+    width: 60%;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.18;
+    color: #4D4D4D;
+    margin-bottom: 16px;
+}
+
+.hero-content h1 span {
+    color: #4CAF4F;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #717171;
+    margin-bottom: 32px;
+}
+
+.hero-img {
+    width: 35%;
+    text-align: right;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 50px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4CAF4F;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.dot.active {
+    opacity: 1;
+}
+
+/* ====================================
+   4. Clients Section
+   ==================================== */
+#client {
+    padding: 40px 0;
+}
+
+#client .client-logos {
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+#client .client-logos img {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* ====================================
+   5. Community Section
+   ==================================== */
+#community {
+    padding: 40px 0 50px 0;
+}
+
+.cards-row {
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    width: 31%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
+    border-radius: 8px;
+    padding: 24px 32px;
+    text-align: center;
+}
+
+.card .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: #E8F5E9;
+    border-radius: 18px 5px 10px 5px;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.28;
+    color: #4D4D4D;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.42;
+    color: #717171;
+}
+
+/* ====================================
+   6. General Feature Block Layout
+   ==================================== */
+.feature-block {
+    padding: 50px 0;
+}
+
+.feature-block .row {
+    justify-content: space-between;
+}
+
+.feature-img {
+    width: 40%;
+}
+
+.feature-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature-text {
+    width: 55%;
+}
+
+.feature-text h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.22;
+    color: #4D4D4D;
+    margin-bottom: 16px;
+}
+
+.feature-text p {
+    font-size: 14px;
+    line-height: 1.42;
+    color: #717171;
+    margin-bottom: 32px;
+}
+
+/* ====================================
+   7. Helping Section / Counters
+   ==================================== */
+#help {
+    padding: 64px 0;
+    background-color: #F5F7FA;
+}
+
+#help .text,
+#help .counter {
+    width: 50%;
+}
+
+#help .text h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.22;
+    color: #4D4D4D;
+}
+
+#help .text span {
+    color: #4CAF4F;
+}
+
+#help .text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #18191F;
+    margin-top: 8px;
+}
+
+#help .counter .count {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#help .counter .count:nth-child(3),
+#help .counter .count:nth-child(4) {
+    margin-bottom: 0;
+}
+
+#help .counter .count img {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+}
+
+#help .counter .count .detail h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.29;
+    color: #4D4D4D;
+}
+
+#help .counter .count .detail p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #717171;
+}
+
+/* ====================================
+   8. Testimonial Section
+   ==================================== */
+#testimonial {
+    background-color: #F5F7FA;
+    padding: 32px 0;
+}
+
+.testimonial-row {
+    justify-content: space-between;
+}
+
+.testimonial-img {
+    width: 30%;
+}
+
+.testimonial-img img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.testimonial-content {
+    width: 65%;
+}
+
+.testimonial-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #717171;
+    margin-bottom: 16px;
+}
+
+.testimonial-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4CAF4F;
+    margin-bottom: 8px;
+}
+
+.testimonial-content .designation {
+    font-size: 14px;
+    color: #89939E;
+    display: block;
+    margin-bottom: 32px;
+}
+
+.customer-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.customer-logos img {
+    height: 32px;
+}
+
+.link-green {
+    color: #4CAF4F;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* ====================================
+   9. Community Updates / Blog Section
+   ==================================== */
+#updates {
+    padding: 48px 0;
+}
+
+.blog-cards {
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.blog-card {
+    width: 31%;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.card-box {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    background: #F5F7FA;
+    box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.card-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #717171;
+    margin-bottom: 16px;
+}
+
+.card-box a {
+    color: #4CAF4F;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* ====================================
+   10. Call to Action (CTA) Section
+   ==================================== */
+#cta {
+    background-color: #F5F7FA;
+    padding: 32px 0;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.18;
+    color: #263238;
+    margin-bottom: 32px;
+}
+
+.btn-icon {
+    font-size: 16px;
+    padding: 14px 32px;
+}
+
+/* ====================================
+   11. Footer Section
+   ==================================== */
+.footer {
+    background-color: #263238;
+    color: #FFFFFF;
+    padding: 64px 0;
+}
+
+.footer-row {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-col {
+    width: 20%;
+}
+
+.brand-col {
+    width: 30%;
+}
+
+.footer-logo img {
+    height: 30px;
+    margin-bottom: 40px;
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 1.42;
+    color: #F5F7FA;
+    margin-bottom: 40px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul a {
+    color: #F5F7FA;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-col ul a:hover {
+    color: #4CAF4F;
+}
+
+.subscribe-col {
+    width: 25%;
+}
+
+.subscribe-form {
+    position: relative;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 11px 40px 11px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.subscribe-form input::placeholder {
+    color: #D9DBE1;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+}
